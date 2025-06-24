@@ -1,4 +1,4 @@
-import {HypermediaResponse} from "./base";
+import {HypermediaLink, HypermediaResponse} from "./base";
 
 export interface AuthConfig {
   baseUrl: string; // https://support.xxxx.xx

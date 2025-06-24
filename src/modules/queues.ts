@@ -2,7 +2,7 @@ import {RTClient} from "../client";
 import {PaginatedResponse} from "../types/base";
 import {Queue} from "../types/queues.types";
 import {SearchOptions} from "../types/search.types";
-import {QueueResource} from "../wrappers/queue";
+import {QueueResource} from "../wrappers/queue-wrapper";
 
 export class Queues{
     constructor(private client : RTClient){}

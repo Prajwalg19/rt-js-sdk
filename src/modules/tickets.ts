@@ -32,7 +32,5 @@ export class Tickets {
     async bulkUpdateTickets(updates: Array<{ id: number } & TicketUpdateRequest>): Promise<any> {
         return this.client.put('/tickets/bulk', updates);
     }
-
-
 }
 

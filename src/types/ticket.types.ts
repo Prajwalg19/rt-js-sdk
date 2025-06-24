@@ -23,6 +23,8 @@ export interface Ticket extends HypermediaResponse {
   Content?: string;
   ContentType?: string;
   CustomFields?: Record<string, any>;
+  Type : "ticket"
+  Starts : 'string';
 }
 
 export interface TicketCreateRequest {
@@ -45,7 +47,7 @@ export interface TicketUpdateRequest {
   Subject?: string;
   Status?: string;
   Priority?: number;
-  Queue?: string | number;
+  Queue?: string | QueueReference;
   Owner?: string;
   Due?: string;
   CustomFields?: CustomField;
@@ -61,4 +63,13 @@ export interface CorrespondRequest {
   TxnCustomFields?: CustomField;
 }
 
+
+export interface TicketReference {
+  id: string;
+  type: 'ticket';
+  _url: string;
+}
+
 export interface CommentRequest extends CorrespondRequest {}
+
+

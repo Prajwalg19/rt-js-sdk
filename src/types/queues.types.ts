@@ -1,17 +1,10 @@
-import {HypermediaResponse} from "./base";
+import {HypermediaLink, HypermediaResponse} from "./base";
 import {UserReference} from "./user.types";
 
 export interface QueueReference {
   id: string;
   type: 'queue';
   _url: string;
-}
-
-export interface Hyperlink {
-  _url: string;
-  ref: string;
-  id?: string;
-  type?: string;
 }
 
 export interface GroupReference {
@@ -29,7 +22,6 @@ export interface CustomFieldReference {
 }
 
 export interface Queue extends HypermediaResponse {
-  _hyperlinks: Hyperlink[];
   TicketTransactionCustomFields: unknown[];
   SortOrder: string;
   id: number;

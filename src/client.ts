@@ -16,7 +16,9 @@ export class RTClient {
         if(this.authConfig.token){
             headers["Authorization"]  = `token ${this.authConfig.token}`
         }else if (this.authConfig.password && this.authConfig.username){
-            headers["Authorization"] = `Basic ${this.authConfig.username}:${this.authConfig.password}`
+            let credentials = btoa(`${this.authConfig.username}:${this.authConfig.password}`); //this is javascript equivalent to curl -X PUT -H "Content-type: application/json" -u "username:password"
+
+            headers["Authorization"] = `Basic ${credentials}`
         }else if(this.authConfig.cookie){
             headers["Cookie"] = this.authConfig.cookie
         }

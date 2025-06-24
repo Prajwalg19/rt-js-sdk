@@ -6,8 +6,6 @@ import {PaginatedResponse} from "./types/base";
 import {Queue} from "./types/queues.types";
 import {SearchOptions} from "./types/search.types";
 import {AuthConfig} from "./types/user.types";
-import {QueueResource} from "./wrappers/queue";
-import {TicketResource} from "./wrappers/ticket-wrapper";
 
 export class RTSDK {
     private client: RTClient;
